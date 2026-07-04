@@ -17,6 +17,7 @@ export const personalInfo = {
   introText:
     "Computer Science Engineering student with hands-on experience building full-stack applications using the MERN stack.Strong problem-solving skills with experience developing and deploying real-world software solutions",
   status: "Open to opportunities",
+  profilePhoto: "profile.jpeg", // You can change this to match your exact file name (e.g. profile.png, profile.jpg)
 };
 
 // ------ ANIMATED ROLES ------

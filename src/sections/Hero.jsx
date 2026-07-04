@@ -126,10 +126,10 @@ export default function Hero() {
           <div className="hero__photo-accent" />
 
           <div className="hero__photo-wrapper">
-            {!photoError ? (
+            {!photoError && personalInfo.profilePhoto ? (
               <img
-                src="profile.jpg"
-                alt="Amruth Kiran N M — Full Stack Developer"
+                src={`${import.meta.env.BASE_URL || '/'}${personalInfo.profilePhoto.replace(/^\//, '')}`}
+                alt={`${personalInfo.name} — Full Stack Developer`}
                 className="hero__photo"
                 onError={() => setPhotoError(true)}
               />
@@ -137,7 +137,7 @@ export default function Hero() {
               <div className="hero__photo-placeholder">
                 <User size={64} color="var(--accent)" strokeWidth={1.5} />
                 <span className="hero__photo-placeholder-text">
-                  Place your photo at<br />public/profile.jpg
+                  Place your photo at<br />public/{personalInfo.profilePhoto || 'profile.jpg'}
                 </span>
               </div>
             )}
