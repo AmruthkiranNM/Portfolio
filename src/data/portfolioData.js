@@ -233,6 +233,47 @@ export const projects = [
     liveUrl: "", // TODO: Add live URL if available
     featured: false,
   },
+  {
+    id: 5,
+    name: "Strategic Enterprise Intelligence Engine",
+    duration: "Mar 2025",
+    category: "Full Stack",
+    technologies: ["Python", "FastAPI", "React.js", "Tailwind CSS"],
+    description:
+      "Developed an enterprise intelligence platform that analyzes company domains and geographic regions to discover and prioritize high-potential business leads.",
+    features: [
+      "Multi-factor scoring engine",
+      "Interactive dashboard",
+      "Evaluate growth, scale & trigger signals",
+      "Generate lead scores",
+      "Targeted outreach strategies",
+    ],
+    image: "/projects/strategic-engine.png",
+    github: "https://github.com/AmruthkiranNM/Enterprise_Intelligence_Engine.git", // TODO: Add GitHub URL
+    liveUrl: "", // TODO: Add live URL if available
+    featured: true,
+  },
+  {
+    id: 6,
+    name: "Inventory and Sales Management System",
+    duration: "Apr 2026",
+    category: "Full Stack",
+    technologies: ["Go (Golang)", "Fyne", "SQLite"],
+    description:
+      "Developed a desktop application for managing inventory and sales, featuring product CRUD operations, sales tracking, automatic stock updates, and low-stock monitoring.",
+    features: [
+      "Product CRUD operations",
+      "Sales tracking & history",
+      "Automatic stock updates",
+      "Low-stock monitoring",
+      "Database-driven revenue reporting",
+      "Interactive GUI using Fyne",
+    ],
+    image: "/projects/inventory-system.png",
+    github: "https://github.com/AmruthkiranNM/go_micro_project.git", // TODO: Add GitHub URL
+    liveUrl: "", // TODO: Add live URL if available
+    featured: false,
+  },
 ];
 
 // ------ PROJECT FILTER CATEGORIES ------
