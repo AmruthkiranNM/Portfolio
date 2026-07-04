@@ -12,7 +12,7 @@ export const personalInfo = {
   location: "Mangalore, Karnataka",
   github: "https://github.com/AmruthkiranNM",
   linkedin: "https://linkedin.com/in/amruth-kiran-n-m", // TODO: Replace with actual LinkedIn URL
-  resumePath: "/resume.pdf",
+  resumePath: "resume.pdf",
   greeting: "Hello, I'm",
   introText:
     "Computer Science Engineering student with hands-on experience building scalable full-stack applications using the MERN tack.Strong problem-solving skills with experience in competitive programming and developing real-world software deployed for production use.",
@@ -150,7 +150,7 @@ export const projects = [
       "Docker deployment",
       "100% local data privacy",
     ],
-    image: "/projects/voice-bi.png",
+    image: "projects/voice-bi.png",
     github: "https://github.com/AmruthkiranNM/voice_BI.git", // TODO: Add GitHub URL
     liveUrl: "", // TODO: Add live URL if available
     featured: true,
@@ -183,7 +183,7 @@ export const projects = [
       "Responsive dashboards",
       "Cloud deployment",
     ],
-    image: "/projects/school-erp.png",
+    image: "projects/school-erp.png",
     github: "https://github.com/AmruthkiranNM/school_system.git", // TODO: Add GitHub URL
     liveUrl: "https://schoolsystem-zeta.vercel.app", // TODO: Add live URL if available
     featured: false,
@@ -207,7 +207,7 @@ export const projects = [
       "Staff assignment",
       "Waste collection workflow management",
     ],
-    image: "/projects/linkops.png",
+    image: "projects/linkops.png",
     github: "https://github.com/AmruthkiranNM/SmartConnect.git", // TODO: Add GitHub URL
     liveUrl: "", // TODO: Add live URL if available
     featured: false,
@@ -228,7 +228,7 @@ export const projects = [
       "Interactive Plotly charts",
       "OpenWeatherMap API integration",
     ],
-    image: "/projects/air-quality.png",
+    image: "projects/air-quality.png",
     github: "https://github.com/AmruthkiranNM/python_air_quality.git", // TODO: Add GitHub URL
     liveUrl: "", // TODO: Add live URL if available
     featured: false,
@@ -248,7 +248,7 @@ export const projects = [
       "Generate lead scores",
       "Targeted outreach strategies",
     ],
-    image: "/projects/strategic-engine.png",
+    image: "projects/strategic-engine.png",
     github: "https://github.com/AmruthkiranNM/Enterprise_Intelligence_Engine.git", // TODO: Add GitHub URL
     liveUrl: "", // TODO: Add live URL if available
     featured: true,
@@ -269,7 +269,7 @@ export const projects = [
       "Database-driven revenue reporting",
       "Interactive GUI using Fyne",
     ],
-    image: "/projects/inventory-system.png",
+    image: "projects/inventory-system.png",
     github: "https://github.com/AmruthkiranNM/go_micro_project.git", // TODO: Add GitHub URL
     liveUrl: "", // TODO: Add live URL if available
     featured: false,

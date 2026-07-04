@@ -128,7 +128,7 @@ export default function Hero() {
           <div className="hero__photo-wrapper">
             {!photoError ? (
               <img
-                src="/profile.jpg"
+                src="profile.jpg"
                 alt="Amruth Kiran N M — Full Stack Developer"
                 className="hero__photo"
                 onError={() => setPhotoError(true)}
