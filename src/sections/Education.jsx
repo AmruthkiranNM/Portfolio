@@ -4,7 +4,8 @@ import SectionHeading from '../components/SectionHeading';
 import { education } from '../data/portfolioData';
 
 /**
- * Education section with vertical timeline layout.
+ * Education section with horizontal timeline layout on desktop,
+ * stacked vertical cards on mobile.
  */
 export default function Education() {
   return (
@@ -17,21 +18,21 @@ export default function Education() {
         />
 
         <div className="education__timeline">
-          {/* Vertical line */}
+          {/* Horizontal connecting line (desktop only) */}
           <div className="education__line" />
 
           {education.map((edu, i) => (
             <motion.div
               key={i}
               className="education__item"
-              initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
             >
               {/* Timeline node */}
               <div className="education__node">
-                <GraduationCap size={16} />
+                <GraduationCap size={20} />
               </div>
 
               {/* Card */}

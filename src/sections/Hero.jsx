@@ -1,18 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, FileDown, MapPin } from 'lucide-react';
+import { ArrowDown, FileDown, MapPin, User } from 'lucide-react';
 import SocialLinks from '../components/SocialLinks';
 import { personalInfo, roles } from '../data/portfolioData';
 
 /**
  * Hero section with animated role typewriter, CTAs, social links,
- * and a developer-themed visual element.
+ * and personal photo on the right side.
  */
 export default function Hero() {
   const [currentRole, setCurrentRole] = useState('');
   const [roleIndex, setRoleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [photoError, setPhotoError] = useState(false);
   const timeoutRef = useRef(null);
 
   // Typewriter effect
@@ -113,52 +114,33 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right Visual — Developer-themed card */}
+        {/* Right — Personal Photo */}
         <motion.div
           className="hero__visual"
-          initial={{ opacity: 0, scale: 0.9, x: 40 }}
-          animate={{ opacity: 1, scale: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
         >
-          <div className="hero__terminal">
-            <div className="hero__terminal-bar">
-              <span className="hero__terminal-dot hero__terminal-dot--red" />
-              <span className="hero__terminal-dot hero__terminal-dot--yellow" />
-              <span className="hero__terminal-dot hero__terminal-dot--green" />
-              <span className="hero__terminal-title">portfolio.jsx</span>
-            </div>
-            <div className="hero__terminal-body">
-              <code>
-                <span className="code-keyword">const</span>{' '}
-                <span className="code-var">developer</span> = {'{\n'}
-                {'  '}<span className="code-key">name</span>:{' '}
-                <span className="code-string">"{personalInfo.firstName}"</span>,{'\n'}
-                {'  '}<span className="code-key">stack</span>:{' '}
-                <span className="code-string">"MERN"</span>,{'\n'}
-                {'  '}<span className="code-key">focus</span>: [
-                {'\n'}
-                {'    '}<span className="code-string">"Full Stack"</span>,{'\n'}
-                {'    '}<span className="code-string">"AI & Analytics"</span>,{'\n'}
-                {'  '}],{'\n'}
-                {'  '}<span className="code-key">passion</span>:{' '}
-                <span className="code-string">"Building Impact"</span>{'\n'}
-                {'}'};
-              </code>
-            </div>
-            {/* Floating tech labels */}
-            <div className="hero__float-tags">
-              {['React', 'Node.js', 'Python', 'MongoDB', 'Docker'].map(
-                (tag, i) => (
-                  <span
-                    key={tag}
-                    className="hero__float-tag animate-float"
-                    style={{ animationDelay: `${i * 0.5}s` }}
-                  >
-                    {tag}
-                  </span>
-                )
-              )}
-            </div>
+          {/* Background accent shapes */}
+          <div className="hero__photo-bg" />
+          <div className="hero__photo-accent" />
+
+          <div className="hero__photo-wrapper">
+            {!photoError ? (
+              <img
+                src="/profile.jpg"
+                alt="Amruth Kiran N M — Full Stack Developer"
+                className="hero__photo"
+                onError={() => setPhotoError(true)}
+              />
+            ) : (
+              <div className="hero__photo-placeholder">
+                <User size={64} color="var(--accent)" strokeWidth={1.5} />
+                <span className="hero__photo-placeholder-text">
+                  Place your photo at<br />public/profile.jpg
+                </span>
+              </div>
+            )}
           </div>
         </motion.div>
       </div>

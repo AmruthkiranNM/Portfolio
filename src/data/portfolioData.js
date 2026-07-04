@@ -52,7 +52,7 @@ export const aboutMe = {
     { label: "Graduation", value: "2027" },
   ],
   stats: [
-    { value: "4+", label: "Featured Projects" },
+    { value: "4", label: "Featured Projects" },
     { value: "8.98", label: "CGPA" },
     { value: "1", label: "Professional Experience" },
   ],

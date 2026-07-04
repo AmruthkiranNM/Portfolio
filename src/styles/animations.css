@@ -1,8 +1,7 @@
 /* ============================================================
-   ANIMATIONS — Keyframes & animation utilities
+   ANIMATIONS — Warm Theme
    ============================================================ */
 
-/* --- Typewriter cursor blink --- */
 @keyframes cursor-blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -10,38 +9,27 @@
 
 .typewriter-cursor {
   display: inline-block;
-  width: 2px;
+  width: 3px;
   height: 1.1em;
   background: var(--accent);
   margin-left: 2px;
   vertical-align: text-bottom;
-  animation: cursor-blink 0.8s steps(1) infinite;
+  animation: cursor-blink 0.85s steps(1) infinite;
+  border-radius: 2px;
 }
 
-/* --- Subtle float --- */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-8px); }
 }
 
 .animate-float {
-  animation: float 4s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite;
 }
 
-/* --- Pulse glow --- */
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 8px rgba(245, 158, 11, 0.15); }
-  50% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.25); }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-
-/* --- Status dot pulse --- */
 @keyframes status-pulse {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: 0.5; }
+  50% { transform: scale(1.5); opacity: 0.4; }
 }
 
 .status-dot {
@@ -49,19 +37,11 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #22c55e;
+  background: var(--success);
   margin-right: 8px;
   animation: status-pulse 2s ease-in-out infinite;
 }
 
-/* --- Gradient border animation --- */
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* --- Spin (for loading) --- */
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
@@ -70,17 +50,9 @@
   animation: spin 1s linear infinite;
 }
 
-/* --- Scroll indicator bounce --- */
-@keyframes scroll-bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
-}
-
-/* --- Reduced motion override --- */
 @media (prefers-reduced-motion: reduce) {
   .typewriter-cursor,
   .animate-float,
-  .animate-pulse-glow,
   .status-dot,
   .animate-spin {
     animation: none !important;

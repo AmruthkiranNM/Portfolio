@@ -54,14 +54,14 @@ export default function Navbar() {
       role="banner"
     >
       <nav className="navbar__inner container" aria-label="Main navigation">
-        {/* Logo */}
+        {/* Brand */}
         <a
           href="#home"
-          className="navbar__logo"
+          className="navbar__brand"
           onClick={(e) => handleNavClick(e, '#home')}
           aria-label="Go to top"
         >
-          <span className="navbar__logo-mark">AK</span>
+          Amruth Kiran
         </a>
 
         {/* Desktop Nav */}
