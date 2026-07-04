@@ -371,6 +371,23 @@ export const certifications = [
   },
 ];
 
+// ------ WORKSHOPS ------
+export const workshops = [
+  {
+    id: "business-modelling-pbl-workshop",
+    title: "Business Modelling for PBL Projects",
+    issuer: "St. Joseph Engineering College, Mangaluru",
+    type: "Workshop",
+    duration: "Three-Day Workshop",
+    date: "26–28 March 2026",
+    organizer: "Internal Quality Assurance Cell (IQAC)",
+    association: "Sanjosh–TLC SJEC and Department of Business Administration",
+    description: "Participated in a three-day workshop on Business Modelling for PBL Projects.",
+    certificateImage: "/certificates/business-modelling-pbl-workshop.jpg",
+    certificateUrl: "https://drive.google.com/file/d/1wsqI_Bn7eEtuJYYjVLxNZtMTOjTgB4S_/view?usp=drive_link", // Paste a Google Drive or external link here if you prefer a link instead of an image
+  }
+];
+
 // ------ CONTACT SECTION ------
 export const contactInfo = {
   heading: "Let's Build Something Meaningful",
