@@ -1,40 +1,42 @@
 /* ============================================================
-   GLOBAL STYLES — Layered Cobalt & Violet Design System
+   GLOBAL STYLES — Midnight Dark Theme
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* Base Backgrounds */
-  --bg-base: #F7F8FC;
-  --bg-pure: #FFFFFF;
-  --bg-soft: #F1F4FA;
+  /* Base Backgrounds (Dark Mode) */
+  --bg-base: #0A1020;
+  --bg-pure: #0F172A;
+  --bg-soft: #111B38;
 
-  /* Typography */
-  --text-primary: #0A1020;
-  --text-secondary: #4B5568;
-  --text-muted: #778196;
-  --text-heading: #0A1020;
+  /* Typography (Dark Mode) */
+  --text-primary: #F8FAFC;
+  --text-secondary: #B8C2D8;
+  --text-muted: #64748B;
+  --text-heading: #FFFFFF;
 
   /* Accents — Cobalt Blue + Soft Violet */
   --accent-primary: #3157F6;
   --accent-hover: #2445D8;
   --accent-secondary: #7557F6;
-  --accent-soft-blue: #E9EEFF;
-  --accent-soft-violet: #F0ECFF;
+  
+  /* Soft accents adapted for dark mode */
+  --accent-soft-blue: rgba(49, 87, 246, 0.15);
+  --accent-soft-violet: rgba(117, 87, 246, 0.15);
 
-  /* Borders */
-  --border-light: rgba(15, 23, 42, 0.08);
-  --border-medium: rgba(15, 23, 42, 0.12);
+  /* Borders (Translucent White) */
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
 
-  /* Shadows */
-  --shadow-xs: 0 1px 2px rgba(10, 16, 32, 0.03);
-  --shadow-sm: 0 1px 3px rgba(10, 16, 32, 0.04), 0 1px 2px rgba(10, 16, 32, 0.02);
-  --shadow-md: 0 4px 6px -1px rgba(10, 16, 32, 0.05), 0 2px 4px -2px rgba(10, 16, 32, 0.03);
-  --shadow-lg: 0 10px 15px -3px rgba(10, 16, 32, 0.05), 0 4px 6px -4px rgba(10, 16, 32, 0.02);
-  --shadow-xl: 0 20px 25px -5px rgba(10, 16, 32, 0.06), 0 8px 10px -6px rgba(10, 16, 32, 0.03);
-  --shadow-glass: 0 18px 60px rgba(15, 23, 42, 0.06);
-  --shadow-accent: 0 4px 14px rgba(49, 87, 246, 0.18);
+  /* Shadows (Darker for dark mode) */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --shadow-glass: 0 18px 60px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 4px 14px rgba(49, 87, 246, 0.3);
 
   /* Status */
   --success: #3157F6;
@@ -128,7 +130,7 @@ ul, ol { list-style: none; }
 }
 
 ::selection {
-  background: var(--accent-soft-blue);
+  background: var(--accent-primary);
   color: var(--text-heading);
 }
 
@@ -152,23 +154,23 @@ ul, ol { list-style: none; }
 
 /* ============ CARDS ============ */
 .glass-card {
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-glass);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 .glass-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
   border-color: var(--border-medium);
 }
 
 .card {
-  background: var(--bg-pure);
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -208,15 +210,15 @@ ul, ol { list-style: none; }
 }
 
 .btn-secondary {
-  background: var(--bg-pure);
+  background: rgba(255, 255, 255, 0.05);
   color: var(--text-primary);
   border: 1px solid var(--border-medium);
 }
 
 .btn-secondary:hover {
   border-color: var(--accent-primary);
-  color: var(--accent-primary);
-  background: var(--bg-pure);
+  color: var(--text-primary);
+  background: rgba(49, 87, 246, 0.1);
   box-shadow: var(--shadow-sm);
 }
 
@@ -233,8 +235,8 @@ ul, ol { list-style: none; }
   font-size: var(--fs-xs);
   font-weight: 500;
   border-radius: var(--radius-full);
-  background: var(--bg-pure);
-  border: 1px solid var(--border-medium);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
   color: var(--text-secondary);
   transition: all var(--transition-fast);
 }
@@ -242,7 +244,7 @@ ul, ol { list-style: none; }
 .tag:hover {
   background: var(--accent-soft-blue);
   border-color: var(--accent-primary);
-  color: var(--accent-primary);
+  color: #FFFFFF;
 }
 
 /* ============ REDUCED MOTION ============ */
