@@ -11,11 +11,11 @@ export const personalInfo = {
   phone: "+91-8660960234",
   location: "Mangalore, Karnataka",
   github: "https://github.com/AmruthkiranNM",
-  linkedin: "https://linkedin.com/in/YOUR_LINKEDIN_USERNAME", // TODO: Replace with actual LinkedIn URL
+  linkedin: "https://linkedin.com/in/amruth-kiran-n-m", // TODO: Replace with actual LinkedIn URL
   resumePath: "/resume.pdf",
   greeting: "Hello, I'm",
   introText:
-    "Computer Science Engineering student skilled in C++, MERN Stack, and Python with experience building full-stack applications. Interested in applying technical skills to build impactful software solutions.",
+    "Computer Science Engineering student with hands-on experience building scalable full-stack applications using the MERN tack.Strong problem-solving skills with experience in competitive programming and developing real-world software deployed for production use.",
   status: "Open to opportunities",
 };
 
@@ -51,11 +51,6 @@ export const aboutMe = {
     { label: "Location", value: "Mangalore, Karnataka" },
     { label: "Graduation", value: "2027" },
   ],
-  stats: [
-    { value: "4", label: "Featured Projects" },
-    { value: "8.98", label: "CGPA" },
-    { value: "1", label: "Professional Experience" },
-  ],
 };
 
 // ------ SKILLS ------
@@ -63,27 +58,27 @@ export const skills = [
   {
     category: "Programming Languages",
     icon: "Code2",
-    items: ["C++", "JavaScript", "Python", "SQL"],
+    items: ["C++", "Java", "JavaScript", "Python", "SQL"],
   },
   {
-    category: "Web Development",
-    icon: "Globe",
-    items: ["HTML", "CSS", "React.js", "Node.js", "Express.js"],
+    category: "Frontend",
+    icon: "Layout",
+    items: ["HTML", "CSS", "React.js"],
   },
   {
-    category: "Database Management",
+    category: "Backend",
+    icon: "Server",
+    items: ["Node.js", "Express.js", "FastAPI"],
+  },
+  {
+    category: "Databases",
     icon: "Database",
-    items: ["MongoDB", "MySQL"],
+    items: ["MongoDB", "MySQL", "SQLite"],
   },
   {
     category: "Tools & Platforms",
     icon: "Wrench",
     items: ["Git", "GitHub", "Docker", "VS Code", "Postman", "Vercel", "Render"],
-  },
-  {
-    category: "Soft Skills",
-    icon: "Users",
-    items: ["Problem Solving", "Teamwork", "Time Management", "Communication"],
   },
 ];
 

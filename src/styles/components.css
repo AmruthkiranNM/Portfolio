@@ -1030,6 +1030,9 @@
   padding: var(--space-xl);
   text-align: center;
   width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .education__duration {
@@ -1058,6 +1061,7 @@
 .education__result {
   font-weight: 700;
   font-size: var(--fs-md);
+  margin-top: auto;
 }
 
 .education__current-badge {
