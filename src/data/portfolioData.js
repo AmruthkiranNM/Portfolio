@@ -157,29 +157,6 @@ export const projects = [
   },
   {
     id: 2,
-    name: "LINKOPS",
-    duration: "Jul 2025 – Nov 2025",
-    category: "Full Stack",
-    technologies: ["React.js", "Node.js", "WhatsApp Integration", "MongoDB"],
-    description:
-      "Developed a full-stack smart waste management platform connecting citizens and NGOs through WhatsApp-based pickup scheduling, automated request tracking, and unique Request ID generation.",
-    features: [
-      "WhatsApp-based pickup scheduling",
-      "Automated request tracking",
-      "Unique Request ID generation",
-      "Citizen and NGO connection",
-      "Role-based NGO dashboards",
-      "Pickup request monitoring",
-      "Staff assignment",
-      "Waste collection workflow management",
-    ],
-    image: "/projects/linkops.png",
-    github: "", // TODO: Add GitHub URL
-    liveUrl: "", // TODO: Add live URL if available
-    featured: false,
-  },
-  {
-    id: 3,
     name: "Shree Sharada High School ERP",
     duration: "Nov 2025 – Present",
     category: "Full Stack",
@@ -207,7 +184,31 @@ export const projects = [
       "Cloud deployment",
     ],
     image: "/projects/school-erp.png",
-    github: "", // TODO: Add GitHub URL
+    github: "https://github.com/AmruthkiranNM/school_system.git", // TODO: Add GitHub URL
+    liveUrl: "https://schoolsystem-zeta.vercel.app", // TODO: Add live URL if available
+    featured: false,
+    
+  },
+  {
+    id: 3,
+    name: "LINKOPS",
+    duration: "Jul 2025 – Nov 2025",
+    category: "Full Stack",
+    technologies: ["React.js", "Node.js", "WhatsApp Integration", "MongoDB"],
+    description:
+      "Developed a full-stack smart waste management platform connecting citizens and NGOs through WhatsApp-based pickup scheduling, automated request tracking, and unique Request ID generation.",
+    features: [
+      "WhatsApp-based pickup scheduling",
+      "Automated request tracking",
+      "Unique Request ID generation",
+      "Citizen and NGO connection",
+      "Role-based NGO dashboards",
+      "Pickup request monitoring",
+      "Staff assignment",
+      "Waste collection workflow management",
+    ],
+    image: "/projects/linkops.png",
+    github: "https://github.com/AmruthkiranNM/SmartConnect.git", // TODO: Add GitHub URL
     liveUrl: "", // TODO: Add live URL if available
     featured: false,
   },
@@ -228,7 +229,7 @@ export const projects = [
       "OpenWeatherMap API integration",
     ],
     image: "/projects/air-quality.png",
-    github: "", // TODO: Add GitHub URL
+    github: "https://github.com/AmruthkiranNM/python_air_quality.git", // TODO: Add GitHub URL
     liveUrl: "", // TODO: Add live URL if available
     featured: false,
   },
