@@ -15,7 +15,7 @@ export const personalInfo = {
   resumePath: "resume.pdf",
   greeting: "Hello, I'm",
   introText:
-    "Computer Science Engineering student with hands-on experience building scalable full-stack applications using the MERN tack.Strong problem-solving skills with experience in competitive programming and developing real-world software deployed for production use.",
+    "Computer Science Engineering student with hands-on experience building full-stack applications using the MERN stack.Strong problem-solving skills with experience developing and deploying real-world software solutions",
   status: "Open to opportunities",
 };
 
@@ -63,7 +63,7 @@ export const skills = [
   {
     category: "Frontend",
     icon: "Layout",
-    items: ["HTML", "CSS", "React.js"],
+    items: ["HTML", "CSS", "React.js", "Tailwind CSS"],
   },
   {
     category: "Backend",
@@ -278,6 +278,31 @@ export const projects = [
 
 // ------ PROJECT FILTER CATEGORIES ------
 export const projectFilters = ["All", "Full Stack", "AI & Data"];
+
+// ------ ACHIEVEMENTS ------
+export const achievements = [
+  {
+    id: 1,
+    title: "2nd Prize",
+    event: "Course-Level PBL Project Exhibition",
+    organization: "St. Joseph Engineering College, Mangaluru",
+    project: "LINKOPS",
+    category: "Project Recognition",
+    highlight: "2nd",
+    description:
+      "Awarded 2nd Prize at the Course-Level PBL Project Exhibition at SJEC for LINKOPS, a full-stack smart waste management platform connecting citizens and NGOs through WhatsApp-based pickup scheduling and request management.",
+  },
+  {
+    id: 2,
+    title: "Phase 2 Qualifier",
+    event: "VEXSTORM'26",
+    organization: "",
+    project: "",
+    category: "Competition Qualification",
+    highlight: "Phase 2",
+    description: "Selected for Phase 2 of VEXSTORM'26.",
+  },
+];
 
 // ------ EDUCATION ------
 export const education = [

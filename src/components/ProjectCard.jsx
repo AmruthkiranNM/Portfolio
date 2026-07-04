@@ -13,6 +13,7 @@ export default function ProjectCard({ project, index }) {
 
   return (
     <motion.article
+      id={`project-${project.name.toLowerCase().replace(/[\s']/g, '-')}`}
       className={`project-card ${isEven ? '' : 'project-card--reversed'}`}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
