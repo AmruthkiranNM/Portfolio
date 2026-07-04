@@ -383,8 +383,19 @@ export const workshops = [
     organizer: "Internal Quality Assurance Cell (IQAC)",
     association: "Sanjosh–TLC SJEC and Department of Business Administration",
     description: "Participated in a three-day workshop on Business Modelling for PBL Projects.",
-    certificateImage: "/certificates/business-modelling-pbl-workshop.jpg",
     certificateUrl: "https://drive.google.com/file/d/1wsqI_Bn7eEtuJYYjVLxNZtMTOjTgB4S_/view?usp=drive_link", // Paste a Google Drive or external link here if you prefer a link instead of an image
+  },
+  {
+    id: "gsoc-llms-workshop",
+    title: "Master the Future: A Hands-on GSoC & LLMs Workshop",
+    issuer: "St. Joseph Engineering College, Mangaluru",
+    type: "Workshop",
+    duration: "Hands-on Session",
+    date: "14 February 2026",
+    organizer: "AgentBlazer Club",
+    association: "Department of Computer Science & Engineering",
+    description: "Participated in a hands-on workshop focused on GSoC and Large Language Models (LLMs).",
+    certificateUrl: "https://drive.google.com/file/d/1wsqI_Bn7eEtuJYYjVLxNZtMTOjTgB4S_/view?usp=drive_link",
   }
 ];
 
