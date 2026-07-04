@@ -19,7 +19,7 @@ export default function About() {
       <div className="container">
         <SectionHeading
           label="About Me"
-          title="Who I Am"
+          title="About Me"
           description="A snapshot of my background and what drives me."
         />
 
@@ -63,22 +63,7 @@ export default function About() {
         </div>
 
         {/* Stats Row */}
-        <motion.div
-          className="about__stats"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          {aboutMe.stats.map((stat, i) => (
-            <div key={i} className="about__stat">
-              <span className="about__stat-value accent-gradient-text">
-                {stat.value}
-              </span>
-              <span className="about__stat-label">{stat.label}</span>
-            </div>
-          ))}
-        </motion.div>
+        
       </div>
     </section>
   );

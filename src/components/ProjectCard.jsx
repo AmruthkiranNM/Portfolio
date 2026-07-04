@@ -13,7 +13,7 @@ export default function ProjectCard({ project, index }) {
 
   return (
     <motion.article
-      className={`project-card glass-card ${isEven ? '' : 'project-card--reversed'}`}
+      className={`project-card ${isEven ? '' : 'project-card--reversed'}`}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
