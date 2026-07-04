@@ -61,7 +61,7 @@ export default function Navbar() {
           onClick={(e) => handleNavClick(e, '#home')}
           aria-label="Go to top"
         >
-          Amruth Kiran
+         
         </a>
 
         {/* Desktop Nav */}

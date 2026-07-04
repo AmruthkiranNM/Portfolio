@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="footer__left">
           <p className="footer__credit">
             Designed & Built by{' '}
-            <span className="accent-gradient-text">{personalInfo.name}</span>
+            <span className="accent-text">{personalInfo.name}</span>
           </p>
           <p className="footer__year">© {currentYear} All rights reserved.</p>
         </div>

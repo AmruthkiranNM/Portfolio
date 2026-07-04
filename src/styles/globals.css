@@ -1,50 +1,45 @@
 /* ============================================================
-   GLOBAL STYLES — Warm Premium Design System
+   GLOBAL STYLES — Premium Navy & Blue Design System
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
   /* Backgrounds */
-  --bg-primary: #FAFAF7;
-  --bg-secondary: #F3F4EF;
+  --bg-primary: #F8F9F5;
+  --bg-secondary: #F2F6FF;
   --bg-white: #FFFFFF;
-  --bg-green-soft: #E8F3EE;
-  --bg-gold-soft: #F8EEDC;
 
   /* Text */
-  --text-primary: #17211B;
-  --text-secondary: #56615A;
-  --text-muted: #7A847D;
-  --text-heading: #17211B;
+  --text-primary: #0B1220;
+  --text-secondary: #536074;
+  --text-muted: #7C8799;
+  --text-heading: #0B1220;
 
-  /* Accent — Deep Green + Gold */
-  --accent: #176B57;
-  --accent-dark: #0F4F41;
-  --accent-light: #23806A;
-  --accent-gold: #D89A3D;
-  --accent-gold-light: #E9B65D;
-  --accent-soft-bg: rgba(23, 107, 87, 0.08);
-  --accent-gold-soft-bg: rgba(216, 154, 61, 0.08);
-  --accent-gradient: linear-gradient(135deg, #176B57 0%, #23806A 100%);
-  --accent-gradient-gold: linear-gradient(135deg, #D89A3D 0%, #E9B65D 100%);
+  /* Accent — Electric Blue + Cyan */
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-secondary: #06B6D4;
+  --accent-soft: #EAF2FF;
+  --accent-soft-bg: rgba(37, 99, 235, 0.07);
+  --accent-gradient: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
 
   /* Borders */
-  --border: #DDE3DE;
-  --border-strong: #CBD4CD;
-  --border-accent: rgba(23, 107, 87, 0.25);
+  --border: #DCE4F0;
+  --border-strong: #C5D0E0;
+  --border-accent: rgba(37, 99, 235, 0.2);
 
   /* Shadows */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.03);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
-  --shadow-accent: 0 4px 14px rgba(23, 107, 87, 0.12);
+  --shadow-xs: 0 1px 2px rgba(11, 18, 32, 0.03);
+  --shadow-sm: 0 1px 3px rgba(11, 18, 32, 0.05), 0 1px 2px rgba(11, 18, 32, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(11, 18, 32, 0.05), 0 2px 4px -2px rgba(11, 18, 32, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(11, 18, 32, 0.06), 0 4px 6px -4px rgba(11, 18, 32, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(11, 18, 32, 0.06), 0 8px 10px -6px rgba(11, 18, 32, 0.03);
+  --shadow-accent: 0 4px 14px rgba(37, 99, 235, 0.15);
 
   /* Status */
-  --success: #176B57;
-  --success-bg: rgba(23, 107, 87, 0.08);
+  --success: #2563EB;
+  --success-bg: rgba(37, 99, 235, 0.07);
 
   /* Typography */
   --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -120,7 +115,7 @@ ul, ol { list-style: none; }
 }
 
 ::selection {
-  background: rgba(23, 107, 87, 0.12);
+  background: rgba(37, 99, 235, 0.12);
   color: var(--text-heading);
 }
 
@@ -130,18 +125,6 @@ ul, ol { list-style: none; }
 ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
 
 /* ============ LAYOUT SYSTEM ============ */
-.page-shell {
-  width: 100%;
-  padding-inline: clamp(1rem, 4vw, 5rem);
-}
-
-.content-wide {
-  width: 100%;
-  max-width: 1800px;
-  margin-inline: auto;
-}
-
-/* Legacy container — maps to new wide system */
 .container {
   width: 100%;
   max-width: 1800px;
@@ -186,12 +169,13 @@ ul, ol { list-style: none; }
 }
 
 .btn-primary {
-  background: var(--accent-gradient);
+  background: var(--accent);
   color: #FFFFFF;
   border: none;
 }
 
 .btn-primary:hover {
+  background: var(--accent-hover);
   box-shadow: var(--shadow-accent);
   transform: translateY(-2px);
 }
@@ -199,12 +183,13 @@ ul, ol { list-style: none; }
 .btn-secondary {
   background: var(--bg-white);
   color: var(--text-primary);
-  border: 1.5px solid var(--accent);
+  border: 1.5px solid var(--border);
 }
 
 .btn-secondary:hover {
-  background: var(--accent-soft-bg);
-  color: var(--accent-dark);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 
 /* ============ ACCENT TEXT ============ */
@@ -227,9 +212,9 @@ ul, ol { list-style: none; }
   font-size: var(--fs-xs);
   font-weight: 500;
   border-radius: var(--radius-full);
-  background: var(--bg-green-soft);
+  background: var(--accent-soft);
   border: 1px solid var(--border);
-  color: var(--accent-dark);
+  color: var(--accent-hover);
   transition: all var(--transition-fast);
 }
 
