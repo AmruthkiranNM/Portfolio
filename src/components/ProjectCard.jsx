@@ -30,12 +30,10 @@ export default function ProjectCard({ project, index }) {
             className="project-card__image"
           />
         ) : (
-          <div className="project-card__placeholder">
-            <div className="project-card__placeholder-content">
-              <span className="project-card__placeholder-number">
-                {String(project.id).padStart(2, '0')}
-              </span>
-              <span className="project-card__placeholder-name">{project.name}</span>
+          <div className="project-card__placeholder" style={{ flexDirection: 'column', gap: '1rem' }}>
+            <div className="project-card__placeholder-text" style={{ fontSize: 'var(--fs-sm)', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', textAlign: 'center' }}>
+              Place your image at<br/>
+              public{project.image}
             </div>
           </div>
         )}
