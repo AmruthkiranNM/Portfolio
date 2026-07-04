@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Trophy, Award, ArrowUpRight } from 'lucide-react';
+import { Trophy, Award, ArrowUpRight, ExternalLink } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import { achievements } from '../data/portfolioData';
 
@@ -22,72 +22,107 @@ export default function Achievements() {
           description="Recognition earned through project development, problem-solving, and technical innovation."
         />
 
-        <div className="achievements__grid">
+        <div className="achievements__list">
           {/* Achievement 1: Primary (LINKOPS) */}
           <motion.div
-            className="achievements__card achievements__card--primary glass-card"
+            className="achievement-item"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.5 }}
           >
-            <div className="achievements__content">
-              <div className="achievements__header">
-                <span className="tag">{achievements[0].category}</span>
-                <Trophy size={20} className="accent-text" />
+            {/* LEFT VISUAL PANEL */}
+            <div className="achievement-item__visual achievement-item__visual--primary">
+              <div className="achievement-item__highlight-wrapper">
+                <span className="achievement-item__highlight">{achievements[0].highlight}</span>
+                <span className="achievement-item__highlight-label">PRIZE</span>
               </div>
-              
-              <div className="achievements__highlight-wrapper">
-                <span className="achievements__highlight">{achievements[0].highlight}</span>
-                <span className="achievements__highlight-label">PRIZE</span>
+              <div className="achievement-item__icon">
+                <Trophy size={28} className="accent-text" />
               </div>
+              <div className="achievement-item__glow"></div>
+            </div>
 
-              <h3 className="achievements__title">{achievements[0].title}</h3>
-              <p className="achievements__event">
-                {achievements[0].event} <br/> 
-                <span className="text-muted">{achievements[0].organization}</span>
-              </p>
+            {/* RIGHT CONTENT PANEL */}
+            <div className="achievement-item__content">
+              <span className="tag">{achievements[0].category}</span>
               
-              <p className="achievements__description">
+              <h3 className="achievement-item__title">{achievements[0].title}</h3>
+              <p className="achievement-item__event">{achievements[0].event}</p>
+              <p className="achievement-item__institution">{achievements[0].organization}</p>
+              
+              <div className="achievement-item__project">
+                <span className="achievement-item__project-label">Awarded Project:</span>
+                <span className="achievement-item__project-name">{achievements[0].project}</span>
+              </div>
+              
+              <p className="achievement-item__description">
                 {achievements[0].description}
               </p>
 
-              <button 
-                onClick={(e) => scrollToProject(e, 'project-linkops')}
-                className="btn btn-secondary achievements__action"
-              >
-                View LINKOPS Project <ArrowUpRight size={16} />
-              </button>
+              <div className="achievement-item__actions">
+                <button 
+                  onClick={(e) => scrollToProject(e, 'project-linkops')}
+                  className="btn btn-secondary achievement-item__action"
+                >
+                  View LINKOPS Project <ArrowUpRight size={16} />
+                </button>
+                {achievements[0].certificateUrl && (
+                  <a 
+                    href={achievements[0].certificateUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn btn-primary achievement-item__action"
+                  >
+                    View Certificate <ExternalLink size={16} />
+                  </a>
+                )}
+              </div>
             </div>
-            {/* Background glow decoration */}
-            <div className="achievements__glow"></div>
           </motion.div>
 
           {/* Achievement 2: Secondary (VEXSTORM) */}
           <motion.div
-            className="achievements__card achievements__card--secondary glass-card"
+            className="achievement-item"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="achievements__content">
-              <div className="achievements__header">
-                <span className="tag">{achievements[1].category}</span>
-                <Award size={20} className="accent-text" />
+            {/* LEFT VISUAL PANEL */}
+            <div className="achievement-item__visual achievement-item__visual--secondary">
+              <div className="achievement-item__highlight-wrapper">
+                <span className="achievement-item__highlight-label">PHASE</span>
+                <span className="achievement-item__highlight">{achievements[1].highlight.split(' ')[1]}</span>
               </div>
-
-              <div className="achievements__highlight-wrapper achievements__highlight-wrapper--secondary">
-                <span className="achievements__highlight-label">PHASE</span>
-                <span className="achievements__highlight">{achievements[1].highlight.split(' ')[1]}</span>
+              <div className="achievement-item__icon">
+                <Award size={28} className="accent-text" />
               </div>
+            </div>
 
-              <h3 className="achievements__title">{achievements[1].title}</h3>
-              <p className="achievements__event">{achievements[1].event}</p>
+            {/* RIGHT CONTENT PANEL */}
+            <div className="achievement-item__content">
+              <span className="tag">{achievements[1].category}</span>
               
-              <p className="achievements__description">
+              <h3 className="achievement-item__title">{achievements[1].title}</h3>
+              <p className="achievement-item__event">{achievements[1].event}</p>
+              
+              <p className="achievement-item__description">
                 {achievements[1].description}
               </p>
+
+              {achievements[1].certificateUrl && (
+                <div className="achievement-item__actions">
+                  <a 
+                    href={achievements[1].certificateUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn btn-primary achievement-item__action"
+                  >
+                    View Certificate <ExternalLink size={16} />
+                  </a>
+                </div>
+              )}
             </div>
           </motion.div>
         </div>

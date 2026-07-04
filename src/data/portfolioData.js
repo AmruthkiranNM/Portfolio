@@ -291,6 +291,7 @@ export const achievements = [
     highlight: "2nd",
     description:
       "Awarded 2nd Prize at the Course-Level PBL Project Exhibition at SJEC for LINKOPS, a full-stack smart waste management platform connecting citizens and NGOs through WhatsApp-based pickup scheduling and request management.",
+    certificateUrl: "https://drive.google.com/file/d/18rf1zz4NGGesCXbvdaTKdxh3JXHHgI_f/view?usp=drive_link", // TODO: Add certificate link if available
   },
   {
     id: 2,
@@ -301,6 +302,7 @@ export const achievements = [
     category: "Competition Qualification",
     highlight: "Phase 2",
     description: "Selected for Phase 2 of VEXSTORM'26.",
+    certificateUrl: "https://drive.google.com/file/d/1v_yH-lZlqIzYqTK2KBwpVt8TenJNcOy6/view?usp=drive_link", // TODO: Add certificate link if available
   },
 ];
 
@@ -353,13 +355,13 @@ export const certifications = [
     title: "Privacy and Security in Online Social Media",
     platform: "NPTEL",
     institution: "IIT Hyderabad",
-    credentialUrl: "", // TODO: Add credential URL if available
+    credentialUrl: "https://drive.google.com/file/d/14nCL4AVoJOS5uBsf28luEJWUh7T7ublE/view?usp=drive_link", // TODO: Add credential URL if available
   },
   {
     title: "The Complete Web Development Bootcamp",
     platform: "Udemy",
     institution: "",
-    credentialUrl: "", // TODO: Add credential URL if available
+    credentialUrl: "https://drive.google.com/file/d/19M27SudDr68XF6uo6q08MCmS5vZj69u6/view?usp=drive_link", // TODO: Add credential URL if available
   },
   {
     title: "Mastering Data Structures & Algorithms in C/C++",
