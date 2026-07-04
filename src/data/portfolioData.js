@@ -151,7 +151,7 @@ export const projects = [
       "100% local data privacy",
     ],
     image: "/projects/voice-bi.png",
-    github: "", // TODO: Add GitHub URL
+    github: "https://github.com/AmruthkiranNM/voice_BI.git", // TODO: Add GitHub URL
     liveUrl: "", // TODO: Add live URL if available
     featured: true,
   },
